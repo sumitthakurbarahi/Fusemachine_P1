@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "four_bar_linkage"
+version = "0.0.1"
+description = "It is assignment project for fusemachine AI"
+authors = [
+  { name = "Someet" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["four_bar_linkage"]
+include = ["pyproject.toml", "four_bar_linkage/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["four_bar_linkage"]
+force-sort-within-sections = true
+
